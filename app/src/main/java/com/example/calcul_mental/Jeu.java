@@ -1,6 +1,8 @@
 package com.example.calcul_mental;
 
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +35,13 @@ public class Jeu extends AppCompatActivity {
         validateButton.setOnClickListener(view -> validateOperation());
 
         newGame();
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.submit_menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     private void newGame() {
