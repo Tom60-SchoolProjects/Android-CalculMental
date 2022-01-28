@@ -8,6 +8,8 @@
         <entry key="app/src/main/res/layout/activity_jeu.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.23809523809523808" />
+        <entry key="app/src/main/res/layout/activity_score.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/menu/submit_menu.xml" value="0.12916666666666668" />
       </map>
     </option>
   </component>
