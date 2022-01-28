@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+    <item
+        android:id="@+id/submite_compute_button"
+
+        android:title="ComputeMenuLabel"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/reset_button"
+        android:title="reset_menu_label" />
 </menu>
