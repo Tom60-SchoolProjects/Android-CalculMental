@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calcul_Mental</string>
+    <string name="app_name">Mental Calculus</string>
     <string name="play">Play</string>
     <string name="bad_answer">Bad answer</string>
     <string name="good_answer">Good answer</string>
