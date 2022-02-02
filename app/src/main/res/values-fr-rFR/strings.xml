@@ -5,4 +5,6 @@
     <string name="good_answer">Bonne réponse</string>
     <string name="calculate">Calculer :</string>
     <string name="app_name">Calcul Mental</string>
+    <string name="validat">Valider</string>
+    <string name="BackHome">Revenir à l\'accuiel</string>
 </resources>

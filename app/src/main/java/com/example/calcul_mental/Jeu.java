@@ -33,6 +33,8 @@ public class Jeu extends AppCompatActivity {
 
         Button validateButton = findViewById(R.id.validate_operation);
         validateButton.setOnClickListener(view -> validateOperation());
+        Button backHomeButton = findViewById(R.id.back_home_button);
+        backHomeButton.setOnClickListener(view -> finish());
 
         newGame();
     }
@@ -71,24 +73,27 @@ public class Jeu extends AppCompatActivity {
                 break;
         }
 
-        operation.setText(firstNb + " " + operationString + " " + secondNb);
+        String calculus = firstNb + " " + operationString + " " + secondNb;
+        operation.setText(calculus);
+        ScoreData.SetLastOperation(calculus + " = " + result);
     }
 
     private void validateOperation() {
         if (TextUtils.isEmpty(operationInput.getText().toString()))
             return;
 
-        if (Integer.parseInt(operationInput.getText().toString()) == result) {
+        if (Integer.parseInt(operationInput.getText().toString()) == result) { // Good answer
             goodOperation.setVisibility(View.VISIBLE);
             badOperation.setVisibility(View.INVISIBLE);
-        } else {
+            ScoreData.AddOperation();
+            newGame();
+        } else { // Bad answer
             goodOperation.setVisibility(View.INVISIBLE);
             badOperation.setVisibility(View.VISIBLE);
         }
 
         operationInput.setText("");
-
-        newGame();
+        ScoreData.AddTries();
     }
 
     private int GetRandomNumber(int lowerBound, int upperBound) {
