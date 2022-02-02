@@ -6,4 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".Score">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nboperations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/operations_number" />
+
+        <TextView
+            android:id="@+id/lastoperation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_operation" />
+
+        <TextView
+            android:id="@+id/pourcentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/success_percentage" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

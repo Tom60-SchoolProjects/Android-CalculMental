@@ -8,4 +8,7 @@
     <string name="BackHome">Back home</string>
     <string name="score">Score</string>
     <string name="refresh">Refresh</string>
+    <string name="operations_number">Operations number :</string>
+    <string name="last_operation">Last operation :</string>
+    <string name="success_percentage">Success percentage :</string>
 </resources>

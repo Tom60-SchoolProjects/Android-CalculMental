@@ -6,7 +6,10 @@
     <string name="calculate">Calculer :</string>
     <string name="app_name">Calcul Mental</string>
     <string name="validat">Valider</string>
-    <string name="BackHome">Revenir à l\'accuiel</string>
+    <string name="BackHome">Revenir à l\'accueil</string>
     <string name="score">Score</string>
     <string name="refresh">Rafraichir</string>
+    <string name="operations_number">Nombre d \'opération :</string>
+    <string name="last_operation">Dernière opération :</string>
+    <string name="success_percentage">Pourcentage de réussite :</string>
 </resources>
