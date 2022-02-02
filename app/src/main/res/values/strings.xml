@@ -6,4 +6,6 @@
     <string name="calculate">Calculate:</string>
     <string name="validat">Validat</string>
     <string name="BackHome">Back home</string>
+    <string name="score">Score</string>
+    <string name="refresh">Refresh</string>
 </resources>

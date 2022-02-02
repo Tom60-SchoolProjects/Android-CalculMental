@@ -7,4 +7,6 @@
     <string name="app_name">Calcul Mental</string>
     <string name="validat">Valider</string>
     <string name="BackHome">Revenir à l\'accuiel</string>
+    <string name="score">Score</string>
+    <string name="refresh">Rafraichir</string>
 </resources>
