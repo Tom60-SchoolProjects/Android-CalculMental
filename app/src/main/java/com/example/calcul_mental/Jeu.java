@@ -1,10 +1,14 @@
 package com.example.calcul_mental;
 
+import android.content.Intent;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -101,5 +105,25 @@ public class Jeu extends AppCompatActivity {
         int random = (int)(Math.random() * range) + lowerBound;
 
         return random;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        switch (id){
+            case  R.id.submite_compute_button :
+                //ouvrir l'activité de resultat
+                Intent intent = new Intent(this, Score.class);
+                startActivity(intent);
+                break;
+            case R.id.reset_button:
+                //nettoyer la base de donnée
+                break;
+        }
+
+
+
+        return super.onOptionsItemSelected(item);
     }
 }

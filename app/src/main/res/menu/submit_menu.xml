@@ -6,9 +6,9 @@
     <item
         android:id="@+id/submite_compute_button"
 
-        android:title="ComputeMenuLabel"
-        app:showAsAction="always" />
+        android:title="@string/score"
+        />
     <item
         android:id="@+id/reset_button"
-        android:title="reset_menu_label" />
+        android:title="@string/refresh" />
 </menu>
