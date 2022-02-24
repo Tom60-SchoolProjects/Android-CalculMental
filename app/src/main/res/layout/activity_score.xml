@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Score">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ScoreActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,21 +13,23 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/nboperations"
+            android:id="@+id/nb_operations_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/operations_number" />
 
         <TextView
-            android:id="@+id/lastoperation"
+            android:id="@+id/last_operation_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/last_operation" />
 
         <TextView
-            android:id="@+id/pourcentage"
+            android:id="@+id/success_percentage_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/success_percentage" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

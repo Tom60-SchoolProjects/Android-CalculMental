@@ -6,8 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class Menu extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
+    //region Methods
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,26 +22,19 @@ public class Menu extends AppCompatActivity {
         //monBouton.setOnClickListener(view -> openJeu());
 
 
-        asssociateOpenActivityTobutton(R.id.compute_button,Jeu.class);
-        asssociateOpenActivityTobutton(R.id.resultbutton,Score.class);
+        asssociateOpenActivityTobutton(R.id.play_button, JeuActivity.class);
+        asssociateOpenActivityTobutton(R.id.score_button, ScoreActivity.class);
     }
 
-    private void asssociateOpenActivityTobutton(int id , Class activity)
-    {
+    private void asssociateOpenActivityTobutton(int id , Class<?> activity) {
         Button button = findViewById(id);
-        button.setOnClickListener(view -> OpenActivity(activity));
+        button.setOnClickListener(view -> openActivity(activity));
     }
 
-    private void OpenActivity(){
-        Intent intent = new Intent(this,Jeu.class);
-        startActivity(intent);
-
-    }
-
-    private void OpenActivity(Class activity){
+    private void openActivity(Class<?> activity) {
         Intent intent = new Intent(this, activity );
         startActivity(intent);
     }
-
+    //endregion
 
 }

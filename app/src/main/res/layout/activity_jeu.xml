@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Jeu">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".JeuActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,26 +14,27 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/operation_label"
+                android:id="@+id/operation_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:labelFor="@id/operation_input"
                 android:text="@string/calculate" />
 
             <TextView
-                android:id="@+id/good_operation"
+                android:id="@+id/good_operation_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/good_answer"
                 android:textColor="@android:color/holo_green_light" />
 
             <TextView
-                android:id="@+id/bad_operation"
+                android:id="@+id/bad_operation_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bad_answer"
@@ -47,7 +48,7 @@
                 android:singleLine="true" />
 
             <Button
-                android:id="@+id/validate_operation"
+                android:id="@+id/validate_operation_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/validat" />

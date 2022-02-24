@@ -1,38 +1,46 @@
 package com.example.calcul_mental;
 
+import android.widget.Toast;
+
 public class ScoreData {
+
+    //region Variables
     private static int nbOperations;
     private static int nbTries;
     private static String lastOperation;
+    //endregion
 
-    public static int GetNumberOfOperations() {
+    //region Methods
+    public static int getNumberOfOperations() {
         return nbOperations;
     }
 
-    public static double GetSuccessRate() {
-        return nbOperations * 100 / nbTries;
+    public static double getSuccessRate() {
+        return (double)nbOperations * 100 / nbTries;
     }
 
-    public static String GetLastOperation() {
+    public static String getLastOperation() {
         return lastOperation;
     }
 
-    public static void AddOperation() {
+    public static void addOperation() {
         nbOperations++;
     }
 
-    public static void AddTries() {
+    public static void addTries() {
         nbTries++;
     }
 
-    public static void SetLastOperation(String lastOperation) {
+    public static void setLastOperation(String lastOperation) {
         ScoreData.lastOperation = lastOperation;
     }
 
-    public static void ClearData()
+    public static void clearData()
     {
         nbOperations = 0;
         nbTries = 0;
-        lastOperation = new String();
+        lastOperation = "";
     }
+    //endregion
+
 }

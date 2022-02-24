@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <item
-        android:id="@+id/submite_compute_button"
-
+        android:id="@+id/menu_score_button"
         android:title="@string/score"
         />
     <item
-        android:id="@+id/reset_button"
-        android:title="@string/refresh" />
+        android:id="@+id/menu_reset_button"
+        android:title="@string/clear_scores" />
 </menu>
