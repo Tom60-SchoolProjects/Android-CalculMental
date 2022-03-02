@@ -14,14 +14,6 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-
-        //Associer une action à mon bouton !!
-
-        //Button monBouton = findViewById(R.id.playbutton);
-
-        //monBouton.setOnClickListener(view -> openJeu());
-
-
         asssociateOpenActivityTobutton(R.id.play_button, JeuActivity.class);
         asssociateOpenActivityTobutton(R.id.score_button, ScoreActivity.class);
     }

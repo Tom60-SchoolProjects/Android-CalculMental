@@ -3,17 +3,18 @@
     <string name="play">Jouer</string>
     <string name="bad_answer">Mauvaise réponse</string>
     <string name="good_answer">Bonne réponse</string>
-    <string name="calculate">Calculer :</string>
+    <string name="calculate">Calculer : %s</string>
     <string name="app_name">Calcul Mental</string>
     <string name="validat">Valider</string>
     <string name="BackHome">Revenir à l\'accueil</string>
     <string name="score">Score</string>
     <string name="clear_scores">Effacer les scores</string>
-    <string name="operations_number">Nombre d \'opération :</string>
-    <string name="last_operation">Dernière opération :</string>
-    <string name="success_percentage">Pourcentage de réussite :</string>
+    <string name="operations_number">Nombre d \'opération : %d</string>
+    <string name="last_operation">Dernière opération : %s</string>
+    <string name="success_percentage">Pourcentage de réussite : %s</string>
     <string name="clear_scores_dialog">Êtes-vous sûr de vouloir effacer votre score ?</string>
     <string name="scores_cleared">Scores effacés avec succès</string>
     <string name="yes">Oui</string>
     <string name="no">Non</string>
+    <string name="back">Revenir en arrière</string>
 </resources>

@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import fr.katycorp.utils.fragments.SimpleDialog;
 
+import static com.example.calcul_mental.ScoreData.safeClearData;
+
 public class JeuActivity extends AppCompatActivity {
 
     //region Variables
@@ -24,7 +26,8 @@ public class JeuActivity extends AppCompatActivity {
     //endregion
 
     //region Methods
-    /// === Assignation de l'interface et démarrage du jeu ===
+
+    //region Assignation de l'interface et démarrage du jeu
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,8 +48,9 @@ public class JeuActivity extends AppCompatActivity {
 
         newGame();
     }
+    //endregion
 
-    /// === Menu ===
+    //region Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -61,22 +65,9 @@ public class JeuActivity extends AppCompatActivity {
         if (id == R.id.menu_score_button)
             //ouvrir l'activité de résultat
             openActivity(ScoreActivity.class);
-        else if (id == R.id.menu_reset_button) {
+        else if (id == R.id.menu_reset_button)
             //nettoyer la base de donnée
-            new SimpleDialog.Builder()
-                    .setTitle(getString(R.string.clear_scores))
-                    .setMessage(getString(R.string.clear_scores_dialog))
-                    .setPrimaryButtonText(getString(R.string.yes))
-                    .setPrimaryButtonClick((view, f) -> {
-                        ScoreData.clearData();
-                        Toast
-                                .makeText(this, R.string.scores_cleared, Toast.LENGTH_SHORT)
-                                .show();
-                    })
-                    .setCloseButtonText(getString(R.string.no))
-                    .build()
-                    .show(getSupportFragmentManager(), "ClearScoresDialogFragment");
-        }
+            safeClearData(this);
 
         return super.onOptionsItemSelected(item);
     }
@@ -85,8 +76,13 @@ public class JeuActivity extends AppCompatActivity {
         Intent intent = new Intent(this, activity);
         startActivity(intent);
     }
+    //endregion
 
-    /// === Logique du jeu ===
+    //region Logique du jeu
+
+    /**
+     * Service qui génère une opération
+     */
     private void newGame() {
         int firstNb = getRandomNumber(0, 10);
         int secondNb = getRandomNumber(0, 10);
@@ -115,10 +111,13 @@ public class JeuActivity extends AppCompatActivity {
         }
 
         String calculus = firstNb + " " + operationString + " " + secondNb;
-        operation.setText(calculus);
+        operation.setText(getString(R.string.calculate, calculus));
         ScoreData.setLastOperation(calculus + " = " + result);
     }
 
+    /**
+     * Service de résolution pour contenir l'opération
+     */
     private void validateOperation() {
         if (operationInput.getText().toString().isEmpty())
             return;
@@ -147,4 +146,5 @@ public class JeuActivity extends AppCompatActivity {
     }
     //endregion
 
+    //endregion
 }
