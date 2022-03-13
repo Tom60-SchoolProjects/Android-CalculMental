@@ -16,4 +16,12 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="back">Back</string>
+    <string name="empty_answer">Empty answer</string>
+    <string name="non_number_answer">Please give only numbers</string>
+    <string name="timer" translatable="false">%1$d:%2$d</string>
+    <string name="game_result">You solved %1$d operation in %2$d minutes and %3$d seconds with %4$d tries.</string>
+    <string name="number_operations">Number of operations</string>
+    <string name="number_tries">Number of tries</string>
+    <string name="time">Time</string>
+    <string name="description">How fast can you solve 10 operations?</string>
 </resources>

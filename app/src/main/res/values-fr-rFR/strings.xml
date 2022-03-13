@@ -17,4 +17,11 @@
     <string name="yes">Oui</string>
     <string name="no">Non</string>
     <string name="back">Revenir en arrière</string>
+    <string name="empty_answer">Réponse vide</string>
+    <string name="non_number_answer">Veuillez ne donner que des chiffres</string>
+    <string name="game_result">Vous avez résolu %1$d opération en %2$d minutes et %3$d secondes avec %4$d essaies.</string>
+    <string name="number_operations">Nombre d\'opérations</string>
+    <string name="number_tries">Nombre d\'essais</string>
+    <string name="time">Temps</string>
+    <string name="description">En combien de temps, tu peux résoudre 10 opérations ?</string>
 </resources>

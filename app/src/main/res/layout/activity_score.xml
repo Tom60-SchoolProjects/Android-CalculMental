@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScoreActivity">
+    tools:context=".visuel.ScoreActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,9 +12,21 @@
         android:orientation="vertical">
 
 
+        <TextView
+            android:id="@+id/result_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:text="@string/game_result"
+            />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:minHeight="80dp"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
@@ -39,11 +51,60 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/scores_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:gravity="center"
+                android:text="#"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:gravity="center"
+                android:text="@string/number_operations"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:gravity="center"
+                android:text="@string/number_tries"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:gravity="center"
+                android:text="@string/time"
+                />
+        </LinearLayout>
+        <ListView
+            android:id="@+id/score_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="20dp" />
+
 
         <Button
             android:id="@+id/back_home_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:text="@string/back" />
     </LinearLayout>
 

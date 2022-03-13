@@ -1,40 +1,53 @@
-package com.example.calcul_mental;
+package com.example.calcul_mental.bdd;
 
-import android.content.Context;
 import android.widget.Toast;
-import androidx.activity.ComponentActivity;
 import androidx.fragment.app.FragmentActivity;
+import com.example.calcul_mental.R;
 import fr.katycorp.utils.fragments.SimpleDialog;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ScoreData {
 
     //region Variables
-    private static int nbOperations = 0;
-    private static int nbTries = 0;
+    private static final ScoreModel totalScore = new ScoreModel();
     private static String lastOperation = "";
+    private static final LinkedList<ScoreModel> scores = new LinkedList<>();
     //endregion
 
     //region Methods
     public static int getNumberOfOperations() {
-        return nbOperations;
+        return totalScore.nbOperations;
     }
 
     public static Double getSuccessRate() {
-        if (nbTries == 0)
+        if (totalScore.nbTries == 0)
             return 0d;
-        return (double)nbOperations * 100 / nbTries;
+        return (double)totalScore.nbOperations * 100 / totalScore.nbTries;
     }
 
     public static String getLastOperation() {
         return lastOperation;
     }
 
+    public static LinkedList<ScoreModel> getAllGameResult() {
+        return scores;
+    }
+
     public static void addOperation() {
-        nbOperations++;
+        totalScore.nbOperations++;
     }
 
     public static void addTries() {
-        nbTries++;
+        totalScore.nbTries++;
+    }
+
+    public static void addGameResult(ScoreModel game) {
+        scores.add(game);
     }
 
     public static void setLastOperation(String lastOperation) {
@@ -59,8 +72,8 @@ public class ScoreData {
 
     public static void clearData()
     {
-        nbOperations = 0;
-        nbTries = 0;
+        totalScore.nbOperations = 0;
+        totalScore.nbTries = 0;
         lastOperation = "";
     }
     //endregion
